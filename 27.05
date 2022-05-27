@@ -25,3 +25,33 @@ const produto = {
 
 console.log(eu);
 console.log(eu.nascimento, eu.idade)
+----------------------------------------------------------------------------------------------
+const aluno = {
+    nome: 'Leticia',
+    sobrenome: 'Guedes',
+    dataNascimento: '01/07/2004',
+    idade: 14,
+    sala : "9° A",
+    responsavel: {
+        nome: 'Eliana Guedes',
+        idade: 36,
+        profissão: 'gerente',},
+        RA: '123456789',
+        nomeCompleto: function () {
+            return this.nome + ' ' + this.sobrenome
+        }  
+}
+
+const escola = {
+    nome: 'E.E LUCYANNY CARROZO LATORRE',
+    endereço: 'Jd. das Flores, Osasco'
+}
+
+const prof = {
+    nome: 'Samuel',
+    idade: 44,
+    disciplina: 'JavaScript',
+}
+
+console.log (escola.nome),
+console.log(aluno.nomeCompleto())
