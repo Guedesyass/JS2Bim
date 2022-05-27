@@ -1,0 +1,27 @@
+const eu = {
+    nome: 'Yasmin',
+    idade: 17,
+    nascimento: '29/07/2004',
+    peso: 70,
+    altura: 1.71,
+    responsavel: {
+        nome: 'Eliana'
+        idade: 40,
+    },
+};
+
+const produto = {
+    id: 145,
+    nome: 'mochila jansport',
+    quantidade: 25,
+    valor: 359,
+    valorTotal: function () {
+        return this.quantidade* this.valor
+    }
+
+}
+
+//console.log(valorTotal());
+
+console.log(eu);
+console.log(eu.nascimento, eu.idade)
