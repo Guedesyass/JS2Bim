@@ -26,6 +26,48 @@ const produto = {
 console.log(eu);
 console.log(eu.nascimento, eu.idade)
 ----------------------------------------------------------------------------------------------
+<!DOCTYPE html lang="pt-br">
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport", content="width-device-width, inital-scale = 1.0 ">
+            <style>
+                table{
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+                th, td{
+                    padding: 10px 20px;
+                    border: 1px solid #000;
+                }
+            </style>
+        </head>
+        <body id= "body" style="font-family: verdana;">
+
+
+            <!--html-->
+
+            <h1> Cadastro de Produtos </h1> </br>
+            Descrição: <input type="text" id="desc" value=""> </br>
+            Quantidade: <input type="number" id="quant" value="0"> </br>
+            Preço Unitário: <input type="number" id="preco" value="0"><br>
+            <input type="button" value="Calcular" onclick="resultado()"> 
+            <input type="button" value="Salvar" onclick="salvar()"> </br>
+            Preço Total: <input type="text" id="total" value="0"> </br>
+            
+            <table>
+                <thead>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </body>
+    </html>
+//java
 const aluno = {
     nome: 'Leticia',
     sobrenome: 'Guedes',
@@ -55,3 +97,42 @@ const prof = {
 
 console.log (escola.nome),
 console.log(aluno.nomeCompleto())
+-----------------------------------------------------------------------------------------------------------------------------------------
+ (28 sloc)  804 Bytes
+   
+const meuProduto = {
+  id: String,
+  nome: String,
+  quantidade: Number,
+  valorUnitario: Number,
+  total: function () {
+    return this.quantidade * this.valorUnitario;
+  }
+}
+
+const produtos = [];
+
+function calcular() {
+  total.value = parseInt(qtd.value) * parseInt(valor.value);
+}
+
+function salvar() {
+
+  meuProduto.nome = desc.value;
+  meuProduto.quantidade = qtd.value;
+  meuProduto.valorUnitario = valor.value;
+  meuProduto.id = Date();
+
+  total.value = meuProduto.total();
+
+  let tr = document.createElement("tr");
+  
+  tr.insertCell(0).innerHTML = desc.value;
+  tr.insertCell(1).innerHTML = qtd.value;
+  tr.insertCell(2).innerHTML = valor.value;
+  document.getElementById("tbody").appendChild(tr);
+
+  //SAlva o produto na lista de produtos
+  produtos.push(meuProduto);
+  console.log(produtos);
+}
